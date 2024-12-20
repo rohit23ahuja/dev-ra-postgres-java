@@ -7,3 +7,6 @@ Postgres java playground
 * connect to postgres and call postgres objects using spring boot jdbc.
 * connect to postgres and call postgres objects using spring jdbc in a spring batch job.
 * set up multi module maven project.
+
+## multi module maven project 
+* good guide on setting multi module project with spring boot - https://spring.io/guides/gs/multi-module
