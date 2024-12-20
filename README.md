@@ -10,3 +10,12 @@ Postgres java playground
 
 ## multi module maven project 
 * good guide on setting multi module project with spring boot - https://spring.io/guides/gs/multi-module
+
+## jdbc postgres
+* in postgres, there are two types of stored objects.
+* function that return a result value.
+* procedures that can perform transaction control.
+* In JDBC both are called using `CallableStatement` using standard JDBC escape call syntax `{call storedobject(?)}`.
+* Property with value `escapeSyntaxCallMode=callIfNoReturn` is used to map `CallableStatements` with return value to 
+stored functions and `CallableStatements` without return values to stored procedures.
+* 
