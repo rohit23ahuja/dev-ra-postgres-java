@@ -1,4 +1,4 @@
-CREATE TEMP TABLE temp_val(some_val bigint);
+CREATE TABLE temp_val(some_val bigint);
 
 CREATE OR REPLACE PROCEDURE commitproc(a INOUT bigint) AS '
 BEGIN
