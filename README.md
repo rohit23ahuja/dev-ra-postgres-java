@@ -18,4 +18,8 @@ Postgres java playground
 * In JDBC both are called using `CallableStatement` using standard JDBC escape call syntax `{call storedobject(?)}`.
 * Property with value `escapeSyntaxCallMode=callIfNoReturn` is used to map `CallableStatements` with return value to 
 stored functions and `CallableStatements` without return values to stored procedures.
-* 
+
+## Reference Links
+* https://mkyong.com/maven/maven-how-to-create-a-multi-module-project/
+* https://spring.io/guides/gs/multi-module
+* https://jdbc.postgresql.org/documentation/callproc/
