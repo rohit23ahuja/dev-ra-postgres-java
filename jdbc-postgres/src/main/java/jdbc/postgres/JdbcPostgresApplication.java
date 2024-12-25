@@ -21,5 +21,6 @@ public class JdbcPostgresApplication {
         statement.setInt(1, 100);
         statement.execute();
         statement.close();
+        connection.close();
     }
 }
