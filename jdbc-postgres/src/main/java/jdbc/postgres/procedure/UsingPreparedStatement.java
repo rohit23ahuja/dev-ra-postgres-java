@@ -19,15 +19,19 @@ public class UsingPreparedStatement {
         properties.setProperty("password", "password");
 
         Class.forName("org.postgresql.Driver");
-        try(Connection connection = DriverManager.getConnection(url, properties);
-            PreparedStatement preparedStatement = connection.prepareStatement("CALL player_by_birth(?, ?, ?, ?, ?)")) {
-            preparedStatement.setString(1, "VK15");
+        Connection connection = DriverManager.getConnection(url, properties);
+        PreparedStatement preparedStatement = connection.prepareStatement("CALL player_by_birth(?, ?, ?, ?, ?)");
+        try(connection; preparedStatement) {
+            preparedStatement.setString(1, "VK16");
             preparedStatement.setString(2, "Virat");
             preparedStatement.setString(3, "Kohli");
             preparedStatement.setLong(4, Long.parseLong("1988"));
             preparedStatement.setLong(5, Long.parseLong("2011"));
             preparedStatement.executeUpdate();
         }
+
+        _log.info("Prepared Statement closed: {}", preparedStatement.isClosed());
+        _log.info("Connection closed: {}", connection.isClosed());
 
     }
 }
